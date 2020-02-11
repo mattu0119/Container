@@ -5,6 +5,14 @@ RUN sudo apt update && \
     sudo apt install nginx && \
     sudo ufw allow 'Nginx HTTP' && \
 
+COPY ./index.html /var/www/html/
+COPY ./nginx.conf /etc/nginx/
+
+EXPOSE 80
+
+CMD sudo nginx -s reload
+
+# <
 RUN echo "`cat >>EOF > /etc/nginx/nginx.conf
 server {
     location / {
@@ -22,7 +30,4 @@ RUN echo "`cat <<EOF > /var/www/html/index.html
    </body>
 </html>
 EOF"`
-
-EXPOSE 80
-
-CMD sudo nginx -s reload
+>#
