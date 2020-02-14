@@ -1,0 +1,81 @@
+DROP TABLE emp;
+DROP TABLE dept;
+
+
+CREATE TABLE dept
+    (dept_id INT, 
+     dept_name VARCHAR(10) NOT NULL, 
+     PRIMARY KEY(dept_id))
+;
+    
+INSERT INTO dept
+    (dept_id, dept_name)
+VALUES
+    (10, '社長室'), 
+    (20, 'HR'),
+    (30, 'SS'),
+    (40, '営業'),
+    (50, 'サポート')
+;
+
+
+
+CREATE TABLE emp
+    (emp_id INT PRIMARY KEY, 
+    name VARCHAR(20) NOT NULL, 
+    kana VARCHAR(40) NOT NULL, 
+    dept_id INT REFERENCES dept(dept_id),
+    money INT,
+    mail VARCHAR(50) NOT NULL, 
+    address VARCHAR(30)) 
+;
+
+
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (1234,'米盛康江','よねもりやすえ',30,10000,'yonemori.yasue@dell.com',null,20,'男');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address,age,sex)
+VALUES
+    (1235,'鷲見和司','わしみかずし',30,12000,'washimi.mazushi@dell.com',null,45,'男');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address,age, sex)
+VALUES
+    (1240,'村木奈美江','むらきなみえ',20,20000,'muraki.namie@dell.com',null,23,'女');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (1337,'岩川妙子','いわかわたえこ',20,2300,'iwakawa.taeko@dell.com','東京都町田市',17,'女');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (1242,'田中より','たなかより',50, 23030,'tanaka.yori@dell.com',null,71,'女');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (1333,'森嶋兼一','もりしまけんいち',40,20000,'morisima.kenichi@dell.com',null,38,'男');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (1535,'オグチ・オニェウ','おぐち・おにぇう',40,20200,'Oguchi.Onyewu@dell.com',null,18,'男');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (1639,'ステファニー・サドッラ','すてふぁにー・さどっら',50,100,'Stephanie.Sadorra@dell.com',null,59,'女');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (1777,'梶田秀昌','かじたひでまさ',50,9999,'kajita.hidemasa@dell.com',null,103,'男');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (1835,'リー・メジャース','りー・めじゃーす',20,10200,'Lee.Majors@dell.com',null,88,'男');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (1992,'テッド・レヴィン','てっど・れびん',20,10000,'Ted.Levine@dell.com',null,62,'男');
+INSERT INTO emp
+    (emp_id, name, kana, dept_id, money, mail, address, age, sex)
+VALUES
+    (2020,'黒柳理栄','くろやなぎりえ',10,50000,'kuroyanagi.rie@dell.com',null,49,'女');
