@@ -21,13 +21,17 @@ VALUES
 
 
 CREATE TABLE emp
-    (emp_id INT PRIMARY KEY, 
+    (
+    emp_id INT PRIMARY KEY, 
     name VARCHAR(20) NOT NULL, 
     kana VARCHAR(40) NOT NULL, 
     dept_id INT REFERENCES dept(dept_id),
     money INT,
     mail VARCHAR(50) NOT NULL, 
-    address VARCHAR(30)) 
+    address VARCHAR(30),
+    age VARCHAR(20) NOT NULL,
+    sex VARCHAR(30) NOT NULL
+    ) 
 ;
 
 
