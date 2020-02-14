@@ -1,5 +1,5 @@
 # コンテナ実行  
-clone git  
+git clone https://github.com/mattu0119/Container.git 
 cd Container/postgres  
 docker build -t postgres12 .  
 docker images  
