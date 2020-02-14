@@ -3,7 +3,6 @@ git clone https://github.com/mattu0119/Container.git
 cd Container/postgres  
 docker build -t postgres12 .  
 docker images  
-docker run --name postgres12.1  
 docker run --name postgres12.1 -e POSTGRES_PASSWORD=p@ssw0rd -d postgres12  
 docker ps  
 docker exec -it postgres12.1 /bin/bash  
