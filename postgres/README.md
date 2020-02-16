@@ -22,12 +22,13 @@ SELECT <列1>,<列2>・・・ FROM <テーブル名> WHERE 条件 ORDER BY <列1
  ・列 in (値１、値２、・・・・）<-> 列not in (値１、値２、・・・・） 
  ・列> 値 <-> 列 ＝＜ 値  
  ・列 IS NULL <-> 列IS NOT NULL  
- ・複数条件の時は上記を「AND」でつなげる
+ ・複数条件の時は上記を「AND」でつなげる  
  ・ORDER BY <列1>, <列2＞ DESC;
 
 SELECT *  
 FROM emp  
 WHERE emp_ID > 100  
+AND age >= '35'  
 ORDER BY emp_id DESC;  
 
 ## Update  
