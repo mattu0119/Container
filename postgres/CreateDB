@@ -29,7 +29,7 @@ CREATE TABLE emp
     money INT,
     mail VARCHAR(50) NOT NULL, 
     address VARCHAR(30),
-    age VARCHAR(20) NOT NULL,
+    age INT NOT NULL,
     sex VARCHAR(30) NOT NULL
     ) 
 ;
